@@ -4,5 +4,6 @@ def call(Map config = [:] ){
   echo json
   writeFile file:"hello", text:scriptTetx
   sh "chmod a+x ./hello"
+  sh "./hello"
   sh "echo pipeline created by ${config.name}"
 }
